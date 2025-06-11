@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤💍👑</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url('banner.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size:cover;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap');
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8a1cd, #f7c0e2);
+    color: white;
+    overflow: hidden;
+  }
+  #opening-screen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #f191b1, #ecb1d4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+  #opening-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+   
+        .button {
+            cursor: pointer;
+            position: relative;
+            padding: 10px 24px;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(223, 137, 165);
+            border: 2px solid rgb(223, 93, 179);
+            border-radius: 34px;
+            background-color: transparent;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border-radius: inherit;
+            scale: 0;
+            z-index: -1;
+            background-color: rgb(250, 143, 184);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .button:hover::before {
+            scale: 3;
+        }
+
+        .button:hover {
+            color: #c5054f;
+            scale: 1.1;
+            box-shadow: 0 0px 20px rgba(147, 98, 193, 0.4);
+        }
+
+        .button:active {
+            scale: 1;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .social-links a {
+            display: flex;
+            margin-right: 20px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #382a69;
+        }
+
+          @keyframes floatUp {
+    0% {
+      opacity: 0;
+      bottom: -60px;
+      transform: rotate(-45deg) scale(0.5);
+    }
+    10% {
+      opacity: 1;
+      bottom: 0;
+      transform: rotate(-45deg) scale(1);
+    }
+    80% {
+      opacity: 1;
+      bottom: 70vh;
+      transform: rotate(-45deg) scale(1);
+    }
+    100% {
+      opacity: 0;
+      bottom: 100vh;
+      transform: rotate(-45deg) scale(0.5);
+    }
+  }
+
+img{
+    max-height: 180px;
+    max-width: 180px;
+    border-radius: 70%;
+}
+
+   </style>
+        
+   <div class ="container">
+    <div id="opening-screen">
+        <img src="HkXSm.jpg" alt="">
+        <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Seja bem vindo meu amor!!</h1>
+        <p class="subtitle" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Espero que você goste! Foi feito com muito amor e carinho ❤️</p>
+        <button class="button">
+          <a style="color: rgb(207, 2, 122);" href="index.html">entrar</a>
+         </button>
+</div>
+
+ <div class="heart-container" id="heartContainer"></div>
+
+<script>
+    const enterBtn = document.getElementById('enter-btn');
+    const openingScreen = document.getElementById('opening-screen');
+    const mainContent = document.getElementById('main-content');
+    enterBtn.addEventListener('click', () => {
+      openingScreen.classList.add('fade-out');
+      setTimeout(() => {
+        openingScreen.style.display = 'none';
+        mainContent.classList.add('visible');
+        document.body.style.overflow = 'auto';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
